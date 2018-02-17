@@ -13,7 +13,7 @@ class Quote {
 	}
 
 	shareTwitter() {
-		openURL('https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + this.phrase + '" ' + this.author));
+		openURL('https://twitter.com/intent/tweet?hashtags=quotes&related=pacotiger&text=' + encodeURIComponent('"' + this.phrase + '" ' + this.author));
 	}
 }
 
