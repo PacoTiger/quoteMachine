@@ -4,6 +4,7 @@ $(function() {
 	const URL = "https://talaikis.com/api/quotes/random/";
 	let xRequest = new XMLHttpRequest();
 	var quote;
+	var themes = ['is-info', 'is-primary', 'is-success', 'is-dark', 'is-danger', 'is-warning', 'is-light'];
 
 //Should be modularized it
 class Quote {
@@ -20,7 +21,12 @@ class Quote {
 //FUNCTIONS
 	function displayQuote(quote) {
 		document.getElementById('phrase').innerHTML = quote.phrase;
-		document.getElementById('author').innerHTML = quote.author;	
+		document.getElementById('author').innerHTML = quote.author;
+	}
+
+	function animationText() {
+ 		$("#phrase").animate({fontSize: "4em"}, 100);
+		$("#phrase").animate({fontSize: "1.2em"}, 400);
 	}
 
 	function makeRequest() {
@@ -29,7 +35,14 @@ class Quote {
 	}
 
 	function openURL(url){
-	  window.open(url, 'Share', 'width=550, height=400, toolbar=0, scrollbars=1 ,location=0 ,statusbar=0,menubar=0, resizable=0');
+	  	window.open(url, 'Share', 'width=550, height=400, toolbar=0, scrollbars=1 ,location=0 ,statusbar=0,menubar=0, resizable=0');
+	}
+
+	function changeTheme () {
+		var randomNumber = Math.floor(Math.random() * themes.length);
+		$("section").removeClass(themes.join(" "))
+					.addClass(themes[randomNumber]);
+
 	}
 
 	//HTTP Request
@@ -38,7 +51,9 @@ class Quote {
 			let phrase = JSON.parse(xRequest.responseText).quote;
 			let author = JSON.parse(xRequest.responseText).author;
 			quote = new Quote(phrase, author);
-			displayQuote(quote);	
+			displayQuote(quote);
+			animationText();
+			changeTheme();
 		}
 	}
 

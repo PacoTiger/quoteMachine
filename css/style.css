@@ -4,18 +4,18 @@
 
 .grow:hover
 {
--webkit-transform: scale(1.15);
--ms-transform: scale(1.15);
-transform: scale(1.15);
+-webkit-transform: scale(1.01);
+-ms-transform: scale(1.01);
+transform: scale(1.01);
 }
 
 .transition {
     font-size: 21px;
     text-align: center;
-    animation: fadein 5s;
-    -moz-animation: fadein 5s; /* Firefox */
-    -webkit-animation: fadein 5s; /* Safari and Chrome */
-    -o-animation: fadein 5s; /* Opera */
+    animation: fadein 6s;
+    -moz-animation: fadein 6s; /* Firefox */
+    -webkit-animation: fadein 6s; /* Safari and Chrome */
+    -o-animation: fadein 6s; /* Opera */
 }
 @keyframes fadein {
     from {
