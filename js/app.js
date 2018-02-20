@@ -6,7 +6,7 @@ $(function() {
 	var quote;
 	var themes = ['is-info', 'is-primary', 'is-success', 'is-dark', 'is-danger', 'is-warning', 'is-light'];
 
-//Should be modularized it
+
 class Quote {
 	constructor (phrase, author){
 		this.phrase = phrase;
@@ -20,7 +20,7 @@ class Quote {
 
 //FUNCTIONS
 	function displayQuote(quote) {
-		document.getElementById('phrase').innerHTML = quote.phrase;
+		document.getElementById('phrase').innerHTML = "<i class='far fa-hand-pointer'></i> " + quote.phrase;
 		document.getElementById('author').innerHTML = quote.author;
 	}
 
