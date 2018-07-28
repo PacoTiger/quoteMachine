@@ -20,7 +20,7 @@ class Quote {
 
 //FUNCTIONS
 	function displayQuote(quote) {
-		document.getElementById('phrase').innerHTML = "<i class='far fa-hand-pointer'></i> " + quote.phrase;
+		document.getElementById('phrase').innerHTML = quote.phrase + "<i class='far fa-hand-pointer'></i>";
 		document.getElementById('author').innerHTML = quote.author;
 	}
 
